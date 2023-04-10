@@ -6,4 +6,12 @@ public class DemoUtils {
         return a + b;
     }
 
+    public Object checkNull(Object obj) {
+        if (obj != null) {
+            return obj;
+        }
+
+        return null;
+    }
+
 }
