@@ -2,6 +2,7 @@ package com.hyunwoo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,11 @@ class DemoUtilsTest {
     void setupBeforeEach() {
         demoUtils = new DemoUtils();
         System.out.println("@BeforeEach executes before the execution of each test method");
+    }
+
+    @AfterEach
+    void tearDownAfterEach() {
+        System.out.println("Running @AfterEach");
     }
 
     @Test
