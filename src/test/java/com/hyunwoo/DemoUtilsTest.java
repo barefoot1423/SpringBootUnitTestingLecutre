@@ -23,6 +23,7 @@ class DemoUtilsTest {
 
     @Test
     void testEqualsAndNotEquals() {
+        System.out.println("Running test : testEqualsAndNotEquals");
         assertEquals(6, demoUtils.add(2, 4), "2 + 4 must be 6");
         assertNotEquals(8, demoUtils.add(2, 4), "2 +4 must not be 8");
     }
@@ -32,6 +33,7 @@ class DemoUtilsTest {
         String str1 = null;
         String str2 = "luv2code";
 
+        System.out.println("Running test : testNullAndNotNull");
         assertNull(demoUtils.checkNull(str1), "Object should be null");
         assertNotNull(demoUtils.checkNull(str2), "Object should not be null");
     }
