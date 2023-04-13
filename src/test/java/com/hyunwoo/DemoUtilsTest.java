@@ -30,6 +30,7 @@ class DemoUtilsTest {
     }
 
     @Test
+    @DisplayName("Null and Not Null")
     void testEqualsAndNotEquals() {
         System.out.println("Running test : testEqualsAndNotEquals");
         assertEquals(6, demoUtils.add(2, 4), "2 + 4 must be 6");
@@ -37,6 +38,7 @@ class DemoUtilsTest {
     }
 
     @Test
+    @DisplayName("Equals and Not Equals")
     void testNullAndNotNull() {
         String str1 = null;
         String str2 = "luv2code";
