@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-@DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
+//@DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
 class DemoUtilsTest {
 
     DemoUtils demoUtils;
@@ -27,7 +27,7 @@ class DemoUtilsTest {
 
     @AfterAll
     static void tearDownAfterAll() {
-        System.out.println("@AfterAll executes only once after all test methods execution in the class");
+        System.out.println("@AfterAll ex ecutes only once after all test methods execution in the class");
     }
 
     @Test
@@ -47,4 +47,22 @@ class DemoUtilsTest {
         assertNotNull(demoUtils.checkNull(str2), "Object should not be null");
     }
 
+    @Test
+    @DisplayName("testSameAndNotSame")
+    void testSameAndNotSame() {
+        String str = "luv2code";
+
+        assertSame(demoUtils.getAcademy(), demoUtils.getAcademyDuplicate(), "Object should refer to same object");
+        assertNotSame(str, demoUtils.getAcademy(), "Objects should not refer to same object");
+    }
+
+    @Test
+    @DisplayName("True and False")
+    void testTrueFalse() {
+        int gradeOne = 10;
+        int gradeTwo = 5;
+
+        assertTrue(demoUtils.isGreater(gradeOne, gradeTwo), "This should return true");
+        assertFalse(demoUtils.isGreater(gradeTwo, gradeOne), "This should return false");
+    }
 }
