@@ -2,9 +2,7 @@ package com.hyunwoo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 class DemoUtilsTest {
 
@@ -19,6 +17,16 @@ class DemoUtilsTest {
     @AfterEach
     void tearDownAfterEach() {
         System.out.println("Running @AfterEach");
+    }
+
+    @BeforeAll
+    static void setupBeforeEachClass() {
+        System.out.println("@BeforeAll executes only once before all test methods execution in the class");
+    }
+
+    @AfterAll
+    static void tearDownAfterAll() {
+        System.out.println("@AfterAll executes only once after all test methods execution in the class");
     }
 
     @Test
