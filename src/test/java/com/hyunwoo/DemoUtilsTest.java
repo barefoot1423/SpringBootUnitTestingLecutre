@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
+import java.util.List;
+
 //@DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
 class DemoUtilsTest {
 
@@ -64,5 +66,26 @@ class DemoUtilsTest {
 
         assertTrue(demoUtils.isGreater(gradeOne, gradeTwo), "This should return true");
         assertFalse(demoUtils.isGreater(gradeTwo, gradeOne), "This should return false");
+    }
+
+    @Test
+    @DisplayName("Array Equals")
+    void testArrayEquals() {
+        String[] stringArray = {"A", "B", "C"};
+        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Array should be the same");
+    }
+
+    @Test
+    @DisplayName("Test Iterable Equals")
+    void testIterableEquals() {
+        List<String> theList = List.of("luv", "2", "code");
+        assertIterableEquals(theList, demoUtils.getAcademyInList(), "Expected List should be the same");
+    }
+
+    @Test
+    @DisplayName("Lines match")
+    void testLinesMatch() {
+        List<String> theList = List.of("luv", "2", "code");
+        assertLinesMatch(theList, demoUtils.getAcademyInList(), "Lines should match");
     }
 }
